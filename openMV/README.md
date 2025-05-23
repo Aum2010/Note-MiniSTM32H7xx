@@ -8,20 +8,25 @@ clone
 
 https://github.com/WeActStudio/MiniSTM32H7xx 
 
+Boot DFU Mode.
+
+Method 1: When the power is on, press the BOOT0 key and the reset key, then release the reset key, and release the BOOT0 key after 0.5 seconds
+Method 2: When the power is off, hold down the BOOT0 key, and release the BOOT0 at 0.5s after the power is on
+DFU Mode: Use the data line to connect to the computer.
+
 Go to
 
-MiniSTM32H7xx\SDK\openmv\Firmwares\V4.4.1
+MiniSTM32H7xx\SDK\openmv\Firmwares\V4.4.1\Internal Flash
 
-flash 0x08000000 and 0x90000000 file to board via st-link.
-![image-4](/img/image-3.png)
-
-![image-4](/img/image-1.png)
-
-## CameraToDisplayDemo
+flash bootloader.bin and openmv.bin file to board USB.
 
 Type-C board to host
 
 ![image-4](/img/image-4.png)
+
+![image-4](/img/image-5.png)
+
+## CameraToDisplayDemo
 
 ```python
 # LCD Example
